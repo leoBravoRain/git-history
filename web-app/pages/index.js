@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Commit } from "../components/commits/Commit";
 import { getCommits } from "../services/commits";
 
 export default function Home() {
@@ -29,28 +30,7 @@ export default function Home() {
         <div>
           <ul role="list" className="divide-y divide-gray-200">
             {commits.map((commit) => (
-              <li key={commit.sha} className="py-4">
-                <div className="flex space-x-3">
-                  <img
-                    className="h-6 w-6 rounded-full"
-                    src={commit.author.avatar_url}
-                    alt=""
-                  />
-                  <div className="flex-1 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-sm font-medium">
-                        {commit.author.login}
-                      </h3>
-                      <p className="text-sm text-gray-500">
-                        {commit.commit.author.date}
-                      </p>
-                    </div>
-                    <p className="text-sm text-gray-500">
-                      Pushed: {commit.commit.message}
-                    </p>
-                  </div>
-                </div>
-              </li>
+              <Commit commit = {commit} key={commit.sha} />
             ))}
           </ul>
         </div>
