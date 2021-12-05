@@ -19,12 +19,17 @@ export default function Home() {
   return (
     <>
       {!loading ? (
-        // list of commits
-        <ul role="list" className="divide-y divide-gray-200">
-          {commits.map((commit) => (
-            <Commit commit={commit} key={commit.sha} />
-          ))}
-        </ul>
+        commits.length > 0 ? (
+          // list of commits
+          <ul role="list" className="divide-y divide-gray-200">
+            {commits.map((commit) => (
+              <Commit commit={commit} key={commit.sha} />
+            ))}
+          </ul>
+        ) : (
+          // if there are no commits
+          <p className="text-center">No commits found</p>
+        )
       ) : (
         <p>Loading...</p>
       )}
