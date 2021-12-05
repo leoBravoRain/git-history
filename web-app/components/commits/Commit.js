@@ -1,5 +1,5 @@
 import Link from "next/link";
-import timeSince from "../../utils/auxFunctions";
+import {timeSince} from "../../utils/auxFunctions";
 
 export const Commit = ({ commit }) => {
 

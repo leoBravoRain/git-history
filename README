@@ -29,3 +29,9 @@ USER_TOKEN=<paste here your user token> node app.js
 2)Then, run the frontend. To do it, open a new terminal and execute this command on the web-app folder:
 
 npx next dev
+
+To open web app:
+
+1) Go to a browser and go to:
+
+http://localhost:3000/
