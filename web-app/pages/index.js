@@ -11,8 +11,8 @@ export default function Home() {
       const commits = await getCommits();
       setCommits(commits);
       setLoading(false);
-    } catch (e) {
-      alert("We had an error, please try to reload the page");
+    } catch (error) {
+      alert("We had an error, please reload the page");
     }
   }, []);
 
@@ -31,7 +31,7 @@ export default function Home() {
           <p className="text-center">No commits found</p>
         )
       ) : (
-        <p>Loading...</p>
+        <p className="text-center">Loading...</p>
       )}
     </>
   );

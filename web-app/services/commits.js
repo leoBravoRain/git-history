@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const getCommits = async () => {
-  try {
     let resp = await axios({
       method: "get",
       url: "http://localhost:5000/api/commits",
@@ -20,7 +19,4 @@ export const getCommits = async () => {
       };
     });
     return commits;
-  } catch (error) {
-    return error;
-  }
 };
