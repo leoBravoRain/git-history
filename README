@@ -1,0 +1,31 @@
+To download project:
+
+1) Download repository to your local machine
+
+To install projects:
+
+1) Open git-api folder
+
+2) Install dependecies, using this command:
+
+npm install or yarn install
+
+3) Open web-app folder
+
+2) Install dependecies, using this command:
+
+npm install or yarn install
+
+To run project:
+
+1) First, run the backend. To do it, execute this command on the git-api folder (It is the folder where package.json folder is in git-api folder):
+
+node app.js
+
+If you have a personal access token to access to Github API, you can set it as an environment variable:
+
+USER_TOKEN=<paste here your user token> node app.js
+
+2)Then, run the frontend. To do it, execute this command on the web-app folder (It is the folder where package.json folder is in web-app folder):
+
+npx next dev
