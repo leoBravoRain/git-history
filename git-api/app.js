@@ -4,14 +4,14 @@ const cors = require("cors");
 
 const app = express();
 
-const port = 3000;
+const port = 5000;
 
-const commitsApi = require("./routes/commits");
+const api = require("./routes/commits");
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/api", commitsApi);
+app.use("/api", api);
 
 // listening
 app.listen(port, function() {
