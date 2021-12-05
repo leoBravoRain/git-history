@@ -6,6 +6,7 @@ export default function Home() {
   const [commits, setCommits] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // initial data fetch
   useEffect(async () => {
     try {
       const commits = await getCommits();

@@ -8,6 +8,8 @@ router.use(function (req, res, next) {
 });
 
 // base route
+// As there are a few resources to get (< 20), It is getting all resources at once
+// but it can be refactored to get them by a limited number (using pagination)
 router.get("/commits", function (req, res) {
   const options = {
     hostname: "api.github.com",
