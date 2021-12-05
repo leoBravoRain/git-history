@@ -4,25 +4,30 @@ import { getCommits } from "../services/commits";
 
 export default function Home() {
   const [commits, setCommits] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
     try {
       const commits = await getCommits();
       setCommits(commits);
+      setLoading(false);
     } catch (e) {
-      // do something here
-      console.error("error: ", e);
+      alert("We had an error, please try to reload the page");
     }
   }, []);
 
   return (
-    // {/* list of commits */}
-    <div>
-      <ul role="list" className="divide-y divide-gray-200">
-        {commits.map((commit) => (
-          <Commit commit={commit} key={commit.sha} />
-        ))}
-      </ul>
-    </div>
+    <>
+      {!loading ? (
+        // list of commits
+        <ul role="list" className="divide-y divide-gray-200">
+          {commits.map((commit) => (
+            <Commit commit={commit} key={commit.sha} />
+          ))}
+        </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </>
   );
 }
