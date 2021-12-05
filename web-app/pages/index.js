@@ -31,6 +31,7 @@ export default function Home() {
           <p className="text-center">No commits found</p>
         )
       ) : (
+        // loading
         <p className="text-center">Loading...</p>
       )}
     </>

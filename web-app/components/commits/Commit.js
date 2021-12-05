@@ -31,7 +31,7 @@ export const Commit = ({ commit }) => {
   };
 
   return (
-    <li key={commit.sha} className="py-4">
+    <li className="py-4">
       <div className="flex space-x-3">
         <img
           className="h-6 w-6 rounded-full"

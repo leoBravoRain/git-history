@@ -16,7 +16,7 @@ router.get("/commits", function (req, res) {
       "User-Agent":
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1521.3 Safari/537.36",
     },
-    OAUth: "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",
+    OAUth: process.env.USER_TOKEN,
   };
   // request to github api
   https
@@ -30,4 +30,3 @@ router.get("/commits", function (req, res) {
 
 // export module
 module.exports = router;
-

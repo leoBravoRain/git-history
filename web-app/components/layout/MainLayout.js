@@ -15,7 +15,7 @@ export default function MainLayout({ children }) {
           <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
             {/* Replace with your content */}
             <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
-              <div className="rounded-lg p-5">{children}</div>
+              <div className="rounded-lg lg:px-8">{children}</div>
             </div>
           </div>
         </main>
