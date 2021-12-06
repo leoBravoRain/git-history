@@ -44,3 +44,20 @@ To open web app:
 1) Go to a browser and go to:
 
 http://localhost:3000/
+
+Project details:
+
+Backend:
+
+1) App.js is the main folder, which set the server. 
+2) Folder routes contains the route to the commits endpoint. It is defined in another folder and file in order to keep separated code with differente functionality.
+
+Frontend:
+
+1) Pages folder: to keep the different pages the app displays
+2) Components folder: to keep the isolated components used on the pages; 
+3) Services folder: to keep the logic to call external API (in this case to the Node JS API)
+4) utils folder: to keep utility functions to use in the app.
+5) At page folder, it has index.js file, which contains the page to load as root of the webpage. If you want to add more pages (/users/ for example), you have to create a folder called user, and then add a index.js as a default page (This is Next js working).
+6) At components in /layout/MainLayout, it is defined a component that defines a layout to be shared in the app. It is used in the all the pages (seted in _app.js file).
+7) Each element has 'className' attribute with differente clases. It is because this project uses Tailwind to add style to elements.
