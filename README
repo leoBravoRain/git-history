@@ -1,3 +1,12 @@
+Overview:
+
+This is a project (frontend and backend) that displays the commits history of this same github repository. 
+
+Technology used:
+
+1) Backend: Express Js, Node Js.
+2) Frontend: React Js, Next Js, Tailwind.
+
 To download project:
 
 1) Download repository to your local machine
